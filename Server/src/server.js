@@ -4,6 +4,16 @@ dotenv.config()
 const app = express()
 import main from './Config/MongoDB.js'
 import redisClient from './Config/RedisDB.js'
+import cookieParser from 'cookie-parser'
+import authRouter from './Routes/AuthRoutes.js'
+
+
+
+
+app.use(express.json())
+app.use(cookieParser())
+app.use('/auth', authRouter)
+
 
 
 
