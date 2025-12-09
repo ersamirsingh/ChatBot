@@ -1,3 +1,7 @@
+
+
+
+
 export function Sidebar({ setView, loadHistory }) {
   return (
     <div className="col-span-1 bg-gray-900 text-white p-4 space-y-4">
