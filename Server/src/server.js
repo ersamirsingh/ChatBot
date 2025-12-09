@@ -7,9 +7,15 @@ import redisClient from './Config/RedisDB.js'
 import cookieParser from 'cookie-parser'
 import authRouter from './Routes/AuthRoutes.js'
 import chatRouter from './Routes/ChatRoutes.js'
+import cors from 'cors'
 
 
 
+app.use(cors({
+  origin: "http://localhost:5173",
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true
+}));
 
 app.use(express.json())
 app.use(cookieParser())

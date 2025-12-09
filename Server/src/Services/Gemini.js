@@ -4,11 +4,11 @@ import {GoogleGenAI} from '@google/genai'
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_KEY });
 
 
-const Gemini = async(req, res) =>{
+const Gemini = async(req, res) =>{   
 
    try {
 
-      const {prompt} = req.body || {}
+      const {prompt} = req.body
       if(!prompt)
          return res.status(400).json({message: 'Prompt not found'})
 

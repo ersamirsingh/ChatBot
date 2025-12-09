@@ -5,8 +5,8 @@ import Gemini from '../Services/Gemini.js'
 
 
 
-chatRouter.get('/',  authenticateUser, Gemini)
+// chatRouter.get('/',  authenticateUser, Gemini)
 
-
+chatRouter.post('/', Gemini)
 
 export default chatRouter
