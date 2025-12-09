@@ -87,7 +87,6 @@ const Login = async (req, res)=>{
 
   try {
     
-    console.log('first');
     
     const {emailId, password} = req.body;
     if(!emailId || !password){
